@@ -7,13 +7,13 @@ sys.path.append(path)
 from page.p_login import LoginTest
 
 class LoginHandle:
-    def __init__(self,driver):
-        self.login_test = LoginTest(driver)
+    def __init__(self):
+        self.login_test = LoginTest()
 
-    def send_username(self):
+    def send_username(self,username):
         self.login_test.get_username_element().send_keys(username)
     
-    def send_password(self):
+    def send_password(self,pw):
         self.login_test.get_password_element().send_keys(pw)
     
     def click_login_button(self):

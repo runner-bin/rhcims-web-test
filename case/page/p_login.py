@@ -7,10 +7,11 @@ sys.path.append(path)
 print path
 from util.read_init import ReadIni
 from util.get_local import GetLocal
-
+from util.base_driver import BaseDriver
 class LoginTest:
-    def __init__(self,driver):
-        self.get_by_local = GetLocal(driver)
+    def __init__(self):
+        self.driver = BaseDriver().get_driver()
+        self.get_by_local = GetLocal(self.driver)
 
     def get_username_element(self):
         return self.get_by_local.get_element('login','username')
