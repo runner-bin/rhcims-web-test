@@ -2,7 +2,7 @@
 import os
 import sys
 import ConfigParser
-path = os.path.join(os.path.abspath(os.path.dirname(__file__)),"../config")
+path = os.path.join(os.path.abspath(os.path.dirname(__file__)), "../config")
 sys.path.append(path)
 
 class ReadIni:
