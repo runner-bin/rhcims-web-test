@@ -1,20 +1,22 @@
 # coding:utf-8
+from case.page.p_login import LoginTest
 
-import os
-import sys
-path = os.path.join(os.path.abspath(os.path.dirname(__file__)),"../")
-sys.path.append(path)
-from page.p_login import LoginTest
-
+# 此类包含对页面中元素的所有操作
 class LoginHandle:
     def __init__(self):
         self.login_test = LoginTest()
 
     def send_username(self,username):
         self.login_test.get_username_element().send_keys(username)
-    
+
     def send_password(self,pw):
         self.login_test.get_password_element().send_keys(pw)
-    
+
     def click_login_button(self):
         self.login_test.get_loginbutton_element().click()
+
+    def clear_username(self):
+        self.login_test.get_username_element().clear()
+
+    def clear_password(self):
+        self.login_test.get_password_element().clear()
