@@ -1,13 +1,13 @@
 # coding:utf-8
-from case.page.p_login import LoginTest
+from case.home.p_home import HomeTest
 
 # 此类包含对页面中元素的所有操作
-class LoginHandle:
+class HomeHandle:
     def __init__(self):
-        self.login_test = LoginTest()
+        self.home_test = HomeTest()
 
-    def send_username(self,username):
-        self.login_test.get_username_element().send_keys(username)
+    def click_change_btn(self,username):
+        self.home_test.get_change_button.click()
 
     def send_password(self,pw):
         self.login_test.get_password_element().send_keys(pw)
@@ -20,3 +20,6 @@ class LoginHandle:
 
     def clear_password(self):
         self.login_test.get_password_element().clear()
+
+    def get_prompt_data(self):
+        return self.login_test.get_error_element().text

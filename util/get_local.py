@@ -1,5 +1,5 @@
 # coding:utf-8
-from read_init import ReadIni
+from util.read_init import ReadIni
 
 # 此类封装driver.find_element_by_meyhod
 class GetLocal:
